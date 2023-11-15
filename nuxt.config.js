@@ -6,6 +6,8 @@ export default defineNuxtConfig({
     "@nuxtjs/google-fonts",
     "@nuxt/content",
     "nuxt-headlessui",
+    "@nuxtjs/robots",
+    "nuxt-simple-sitemap",
   ],
 
   googleFonts: {
@@ -25,5 +27,29 @@ export default defineNuxtConfig({
     private: {
       openaiApiKey: process.env.OPENAI_API_KEY,
     },
+  },
+
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: "en-US",
+      },
+      charset: "utf-8",
+      viewport: "width=device-width, initial-scale=1",
+      meta: [
+        {
+          name: "robots",
+          content:
+            "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
+        },
+      ],
+    },
+  },
+  site: {
+    url: "https://modelleai.com",
+  },
+  robots: {
+    UserAgent: "*",
+    Disallow: "",
   },
 });

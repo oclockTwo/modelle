@@ -163,12 +163,31 @@ function getOpenAPIData(data) {
     isCorrect.value = 2;
   }
 }
+
+useHead({
+  title: "ModelLe AI Games",
+  meta: [
+    {
+      name: "description",
+      content:
+        "A large language model puzzle solving model in a quiz format",
+    },
+  ],
+  link: [
+    {
+      rel: "canonical",
+      href: "https://modelleai.com",
+    },
+    {
+      rel: "icon",
+      href: "/favicon.ico",
+      type: "image/x-icon",
+    },
+  ],
+});
 </script>
 
 <style scoped>
-.font-roboto {
-  font-family: "Roboto", sans-serif;
-}
 .font-Josefin-sans {
   font-family: "Josefin Sans", sans-serif;
 }
