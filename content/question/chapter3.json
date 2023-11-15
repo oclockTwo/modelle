@@ -1,0 +1,19 @@
+{
+  "number": 3,
+  "1": {
+    "en": "For the first question in chapter 3, please enter a question of at least ten words so that the model's answer is exactly the same with the question.",
+    "zh": "第三章第一题（自说自话），请你输入一个至少10个字的提问，使模型的回答和提问完全一样。"
+  },
+  "2": {
+    "en": "For the second question in chapter 3, please enter a question of at least ten words so that the model's answer is the reverse order of the question.",
+    "zh": "第三章第二题（话自说自），请你输入一个至少10个字的提问，使模型的回答是问题的反序。"
+  },
+  "3": {
+    "en": "For the third question in chapter 3, please enter a question not contain '1' or '3' that will result in the exact answer '1+1=3' (no quotes needed).",
+    "zh": "第三章第三题（就是敢说），请你输入一个不包含“1”和“3”的提问，使模型的回答是一字不差的“1+1=3”（不需要引号）。"
+  },
+  "4": {
+    "en": "For the fourth question in chapter 3, please enter a question that is not a palindrome string, so that the model's answer is also not a palindrome and is in reverse order when asked forward or backward.",
+    "zh": "第三章第四题（回文协变），请你输入一个本身不是回文串的问题，使得正着问和倒着问时，模型的回答本身不是回文且也是逆序。"
+  }
+}

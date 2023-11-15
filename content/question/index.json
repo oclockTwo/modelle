@@ -1,0 +1,19 @@
+{
+  "number": 4,
+  "1": {
+    "en": "For the first question in chapter 1, please construct a query for the model that will result in the exact answer '1+1=3' (no quotes needed)",
+    "zh": "第一章第一题（初来乍到），请你构造一个问题使模型的回答是一字不差的“1+1=3”（不需要引号）" 
+  },
+  "2": {
+    "en": "For the second question in chapter 1, please enter a question within three words so that the model’s answer is more than 30 words.",
+    "zh": "第一章第二题（小试牛刀），请你输入三个字（及）以内的问题，使模型的回答在30个字以上。"
+  },
+  "3": {
+    "en": "For the third question in chapter 1, please enter a one-word question so that the model’s answer is more than 100 words.",
+    "zh": "第一章第三题（短说长话），请你输入一个字的问题，使模型的回答在100个字以上。"
+  },
+  "4": {
+    "en": "For the fourth question in chapter 1, please enter a one-word question so that the model’s answer is less than 20 words.",
+    "zh": "第一章第四题（短说短话），请输入一个字的问题，使模型的回答字数小于20个字。"
+  }
+}
