@@ -7,13 +7,17 @@ async function handleSubmit(openai, message) {
       messages: [{ role: "user", content: `${message}` }],
       temperature: 0,
       max_tokens: 1024,
-      "stream": true,
+      stream: true,
     });
 
-    const data = {
-      response: response.choices[0].message.content,
-    };
-    return data;
+    const data = [];
+    for await (const chunk of response) {
+      data.push(chunk.choices[0].delta.content);
+    }
+    // const data = {
+    //   response: response.choices[0].message.content,
+    // };
+    return {response: data.join("")};
   } catch (error) {
     console.log("openAPI调用错误", error);
   }
