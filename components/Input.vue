@@ -14,11 +14,8 @@
             placeholder="Input Your Answer..."
           />
 
-          <!-- Spacer element to match the height of the toolbar -->
           <div class="py-2" aria-hidden="true">
-            <!-- <div class="py-px"> -->
             <div class="h-9" />
-            <!-- </div> -->
           </div>
         </div>
 

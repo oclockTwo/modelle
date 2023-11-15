@@ -34,7 +34,7 @@
             <button class="btn btn-warning" @click="prev">prev</button>
           </div>
           <div v-if="!isNext">
-            <div class="tooltip" data-tip="Please complete this chapter first">
+            <div class="tooltip" data-tip="Please complete this question first">
               <button class="btn btn-success" disabled="disabled">next</button>
             </div>
           </div>
@@ -88,7 +88,7 @@ const isLoading = ref(true);
 const isCorrect = ref(0);
 const output = ref("");
 const explanation = ref("");
-const isNext = ref(true);
+const isNext = ref(false);
 function reset() {
   isLoading.value = true;
   isCorrect.value = 0;
@@ -112,7 +112,7 @@ function next() {
     }
   }
 
-  if(y.value === ynumber - 1) {
+  if(x.value > currentX || (x.value === currentX && y.value > currentY)) {
     isNext.value = false;
   } else {
     isNext.value = true;
@@ -165,12 +165,12 @@ function getOpenAPIData(data) {
 }
 
 useHead({
-  title: "ModelLe AI Games",
+  title: "ModelLe AI Games - Large Language Model Puzzle Game",
   meta: [
     {
       name: "description",
       content:
-        "A large language model puzzle solving model in a quiz format",
+        "A dialog mode puzzle game with a large language model for solving puzzles",
     },
   ],
   link: [

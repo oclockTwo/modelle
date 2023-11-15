@@ -4,19 +4,19 @@
   <dialog id="my_modal_1" class="modal">
     <div class="modal-box">
       <div v-if="isLoading" class="text-center mt-8">
-        <h3 class="font-bold text-lg mb-6">It's almost done... It's almost done... Don't rush it</h3>
+        <p class="font-bold text-lg mb-6">It's almost done... It's almost done... Don't rush it</p>
         <span class="loading loading-spinner loading-lg"></span>
         <p class="text-6xl mt-6">🫣</p>
       </div>
       <div class="text-center">
         <div v-if="isCorrect === 1">
-          <h3 class="font-bold text-lg mb-6">Congratulations! You're amazing</h3>
+          <p class="font-bold text-lg mb-6">Congratulations! You're amazing</p>
           <p class="text-6xl">🥳</p>
           <p class="text-center">You can go to the next question.</p>
           <p class="font-bold mt-6">Output: {{ output }}</p>
         </div>
         <div v-if="isCorrect === 2">
-          <h3 class="font-bold text-lg mb-6">Oh no! Just a little bit</h3>
+          <p class="font-bold text-lg mb-6">Oh no! Just a little bit</p>
           <p class="text-6xl">🥺</p>
           <p class="text-center">Please check that your post and outputs meet the requirements.</p>
           <p class="font-bold mt-6">Output: {{ output }}</p>
