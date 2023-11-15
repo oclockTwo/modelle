@@ -7,6 +7,7 @@ async function handleSubmit(openai, message) {
       messages: [{ role: "user", content: `${message}` }],
       temperature: 0,
       max_tokens: 1024,
+      "stream": true,
     });
 
     const data = {
