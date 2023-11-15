@@ -1,6 +1,6 @@
 {
   "functions": {
-    "__nitro/api/*.js": {
+    "__nitro/*.js": {
       "maxDuration": 50
     }
   }
