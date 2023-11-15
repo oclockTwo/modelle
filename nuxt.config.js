@@ -29,6 +29,16 @@ export default defineNuxtConfig({
     },
   },
 
+  nitro: {
+    server: {
+      handlers: {
+        '/api/*': {
+          timeout: 50000 // 50秒
+        }
+      }
+    }
+  },
+
   app: {
     head: {
       htmlAttrs: {
