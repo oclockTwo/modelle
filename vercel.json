@@ -1,6 +1,6 @@
 {
   "functions": {
-    "__nitro": {
+    "/__nitro": {
       "maxDuration": 50
     }
   }
