@@ -4,11 +4,11 @@
     class="h-screen overflow-auto font-Josefin-sans mx-auto max-w-3xl px-4 sm:px-6 lg:px-8"
   >
     <div class="flex justify-between bg-gray-200 rounded-md items-center mt-4">
-      <div></div>
+      <div class="w-1/3"></div>
       <h1 class="text-4xl text-center py-2">
         Model<span class="text-green-400">Le</span> AI
       </h1>
-      <div class="pr-8">
+      <div class="pr-8 w-1/3 flex justify-end">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -24,6 +24,20 @@
             d="M11.25 11.25l.041-.02a.75.75 0 011.063.852l-.708 2.836a.75.75 0 001.063.853l.041-.021M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-9-3.75h.008v.008H12V8.25z"
           />
         </svg>
+        
+        <a
+          href="https://twitter.com/nibing1029820"
+          target="_blank"
+          rel="noreferrer"
+          class="cursor-pointer pl-6"
+          >
+          <div class="tooltip" data-tip="Submit your question">
+          <img
+            src="/images/icons/submit.jpg"
+            alt="twitter"
+            class="block w-8 max-w-full h-8 align-middle"
+        /></div></a>
+        
       </div>
     </div>
 

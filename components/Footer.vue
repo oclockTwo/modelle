@@ -1,6 +1,6 @@
 <template>
   <footer
-    class="flex z-0 flex-col flex-shrink justify-center items-center p-0 mt-0 w-full leading-6 text-black"
+    class="flex z-0 flex-col flex-shrink justify-center items-center w-full leading-6 text-black"
   >
     <div
       class="flex flex-row justify-center items-center pb-3 w-full leading-4 pointer-events-none"
@@ -18,7 +18,7 @@
           "
           class="block my-0 mx-px w-4 max-w-full h-4"
       /></span>
-      <span class="font-bold text-lg">Model<span class="text-green-600">LE</span> AI</span>?
+      <span class="font-bold text-lg">Model<span class="text-green-600">LE</span> AI</span>
     </div>
     <div class="flex gap-5 justify-center items-center mt-2 text-black">
       <a

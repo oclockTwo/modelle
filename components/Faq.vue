@@ -71,6 +71,14 @@ the question.`,
     answer:
       "The model is chatgpt-3.5-turbo, which is a large language model \ntrained by the openai.com",
   },
+  {
+    question: "How to contact me?",
+    answer: "If you have any ideas or suggestions for this game, please \nfeel free to contact me! tommy.ni1997@gmail.com "
+  },
+  {
+    question: "Source of inspiration",
+    answer: "This game is inspired by the Chinese phrase 'Oops! I'm surrounded \nby large language models' by Haoqiang Fan."
+  }
   // More questions...
 ];
 </script>
