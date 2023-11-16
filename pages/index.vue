@@ -64,7 +64,7 @@
           </p>
           <Input @sendOpenAPIData="getOpenAPIData" />
         </div>
-        <div class="flex justify-between px-4 pb-4">
+        <div class="flex justify-between items-center px-4 pb-4">
           <div v-if="x === 0 && y === 0">
             <div class="tooltip" data-tip="Not as before">
               <button class="btn btn-warning" disabled="disabled">prev</button>
@@ -77,7 +77,8 @@
             ><img
               src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
               alt="Buy Me A Coffee"
-              style="height: 50px !important; width: 217px !important"
+              class="sm:w-[217px] sm:h-[50px] w-[150px] h-[35px]"
+              
           /></a>
           <div v-if="!isNext">
             <div class="tooltip" data-tip="Please complete this question first">
