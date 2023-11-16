@@ -47,11 +47,12 @@ const comment = ref("");
 
 async function handleSubmit() {
   const words = comment.value.split(/\s+/);
+  console.log("words:", words, "length:", words.length);
   if (words.length > 100) {
     alert("Cannot exceed 100 words");
     return;
   }
-  if(words.length === 0) {
+  if(words.length === 1 && words[0] === "") {
     alert("Please input your answer");
     return;
   }
