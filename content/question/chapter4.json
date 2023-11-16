@@ -1,7 +1,7 @@
 {
   "number": 1,
   "1": {
-    "en": "For the third question in chapter 4, please enter a positive integer greater than one as the question so that the answer contains a number that is exactly 1 different from it.",
+    "en": "Please enter a positive integer greater than one as the question so that the answer contains a number that is exactly 1 different from it.",
     "zh": "第四章第三题（自然之密），请输入一个大于一的正整数作为问题，使回答里包含和它刚好相差1的数。"
   }
 }
