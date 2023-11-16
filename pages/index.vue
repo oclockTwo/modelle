@@ -165,12 +165,12 @@ function getOpenAPIData(data) {
 }
 
 useHead({
-  title: "ModelLe AI Games - Large Language Model Puzzle Game",
+  title: "ModelLe AI Games - ChatGPT Dialog Puzzle Game",
   meta: [
     {
       name: "description",
       content:
-        "A dialog mode puzzle game with a large language model for solving puzzles",
+        "A very interesting dialog mode puzzle game that uses the chatgpt model",
     },
   ],
   link: [

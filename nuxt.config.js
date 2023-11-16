@@ -53,6 +53,13 @@ export default defineNuxtConfig({
       ],
     },
   },
+  script: [
+    {
+      defer: true,
+      'data-domain': "modelleai.com",
+      src:"https://plausible.io/js/script.js",
+    },
+  ],
   site: {
     url: "https://modelleai.com",
   },

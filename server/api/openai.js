@@ -12,6 +12,7 @@ async function handleSubmit(openai, message) {
 
     const data = [];
     for await (const chunk of response) {
+      // console.log(chunk.choices[0].delta.content);
       data.push(chunk.choices[0].delta.content);
     }
     // const data = {
