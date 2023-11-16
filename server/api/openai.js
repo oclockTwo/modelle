@@ -23,6 +23,8 @@ async function handleSubmit(openai, message) {
   }
 }
 
+export const maxDuration = 300;
+
 export default defineEventHandler(async (event) => {
   const config = useRuntimeConfig(event);
   const apiKey = config.private.openaiApiKey;
