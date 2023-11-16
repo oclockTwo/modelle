@@ -17,9 +17,9 @@
               <DisclosureButton
                 class="flex w-full items-start justify-between text-left text-gray-900"
               >
-                <span class="text-2xl font-semibold leading-7">{{
+                <h3 class="text-2xl font-semibold leading-7">{{
                   faq.question
-                }}</span>
+                }}</h3>
                 <span class="ml-6 flex h-7 items-center">
                   <PlusSmallIcon
                     v-if="!open"
@@ -69,7 +69,7 @@ the question.`,
   {
     question: "What is the model?",
     answer:
-      "The model is chatgpt-3.5-turbo, which is a large language model trained by the openai.com",
+      "The model is chatgpt-3.5-turbo, which is a large language model \ntrained by the openai.com",
   },
   // More questions...
 ];

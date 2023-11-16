@@ -5,7 +5,7 @@
   >
     <div class="flex justify-between bg-gray-200 rounded-md items-center mt-4">
       <div></div>
-      <h1 class="text-4xl text-center   py-2">
+      <h1 class="text-4xl text-center py-2">
         Model<span class="text-green-400">Le</span> AI
       </h1>
       <div class="pr-8">
@@ -77,6 +77,7 @@
       </div>
     </div>
   </main>
+  <Footer />
   <Faq />
 </template>
 
