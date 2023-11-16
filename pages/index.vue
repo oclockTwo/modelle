@@ -19,9 +19,13 @@
           <img src="/images/ideogram.jpeg" alt="modelle" class="bg-cover" />
         </figure>
         <div class="card-body">
-          <h2 class="text-center text-2xl">Chapter{{ x+1 }}</h2>
-          <p class="text-2xl text-center mt-2">Question{{ x+1 }}-{{ y+1 }}:</p>
-          <p class="sm:text-sm md:text-xl text-center mt-2 h-24 overflow-auto">{{ questions[x].value[y+1].en }}</p>
+          <h2 class="text-center text-2xl">Chapter{{ x + 1 }}</h2>
+          <p class="text-2xl text-center mt-2">
+            Question{{ x + 1 }}-{{ y + 1 }}:
+          </p>
+          <p class="sm:text-sm md:text-xl text-center mt-2 h-24 overflow-auto">
+            {{ questions[x].value[y + 1].en }}
+          </p>
           <Input @sendOpenAPIData="getOpenAPIData" />
         </div>
         <div class="flex justify-between px-4 pb-4">
@@ -33,6 +37,12 @@
           <div v-else>
             <button class="btn btn-warning" @click="prev">prev</button>
           </div>
+          <a href="https://www.buymeacoffee.com/blini" target="_blank"
+            ><img
+              src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
+              alt="Buy Me A Coffee"
+              style="height: 50px !important; width: 217px !important"
+          /></a>
           <div v-if="!isNext">
             <div class="tooltip" data-tip="Please complete this question first">
               <button class="btn btn-success" disabled="disabled">next</button>
@@ -98,16 +108,16 @@ function reset() {
 
 function next() {
   const xnumber = questions.length;
-  const ynumber = questions[x.value].value['number'];
-  if(x.value < xnumber - 1) {
-    if(y.value < ynumber - 1) {
+  const ynumber = questions[x.value].value["number"];
+  if (x.value < xnumber - 1) {
+    if (y.value < ynumber - 1) {
       y.value += 1;
     } else {
       x.value += 1;
       y.value = 0;
     }
   } else {
-    if(y.value < ynumber - 1) {
+    if (y.value < ynumber - 1) {
       y.value += 1;
     }
   }
@@ -121,16 +131,16 @@ function next() {
 
 function prev() {
   const xnumber = questions.length;
-  const ynumber = questions[x.value].value['number'];
-  if(x.value > 0) {
-    if(y.value > 0) {
+  const ynumber = questions[x.value].value["number"];
+  if (x.value > 0) {
+    if (y.value > 0) {
       y.value -= 1;
     } else {
       x.value -= 1;
-      y.value = questions[x.value].value['number'] - 1;
+      y.value = questions[x.value].value["number"] - 1;
     }
   } else {
-    if(y.value > 0) {
+    if (y.value > 0) {
       y.value -= 1;
     }
   }
@@ -148,7 +158,7 @@ function getOpenAPIData(data) {
   output.value = data.response;
 
   // 进行输入和输出校验
-  const key = String(x.value+1) + String(y.value+1);
+  const key = String(x.value + 1) + String(y.value + 1);
   const func = checkFunctionMaps.get(key);
 
   const result = func(data.request, data.response);
