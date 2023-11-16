@@ -47,7 +47,7 @@ const comment = ref("");
 
 async function handleSubmit() {
   const words = comment.value.split(/\s+/);
-  console.log("words:", words, "length:", words.length);
+  // console.log("words:", words, "length:", words.length);
   if (words.length > 100) {
     alert("Cannot exceed 100 words");
     return;
