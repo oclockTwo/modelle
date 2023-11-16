@@ -51,7 +51,6 @@ defineEmits(["reset"]);
 
 <style scoped>
 /* HTML: <div class="loader"></div> */
-/* HTML: <div class="loader"></div> */
 .loader {
   width: 35px;
   height: 80px;

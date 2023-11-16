@@ -51,15 +51,16 @@ export default defineNuxtConfig({
             "index, follow, max-snippet:-1, max-video-preview:-1, max-image-preview:large",
         },
       ],
+      script: [
+        {
+          defer: true,
+          'data-domain': "modelleai.com",
+          src:"https://plausible.io/js/script.js",
+        },
+      ],
     },
   },
-  script: [
-    {
-      defer: true,
-      'data-domain': "modelleai.com",
-      src:"https://plausible.io/js/script.js",
-    },
-  ],
+  
   site: {
     url: "https://modelleai.com",
   },
