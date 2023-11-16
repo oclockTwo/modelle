@@ -88,7 +88,7 @@ const isLoading = ref(true);
 const isCorrect = ref(0);
 const output = ref("");
 const explanation = ref("");
-const isNext = ref(false);
+const isNext = ref(true);
 function reset() {
   isLoading.value = true;
   isCorrect.value = 0;
@@ -112,11 +112,11 @@ function next() {
     }
   }
 
-  if(x.value > currentX || (x.value === currentX && y.value > currentY)) {
-    isNext.value = false;
-  } else {
-    isNext.value = true;
-  }
+  // if(x.value > currentX || (x.value === currentX && y.value > currentY)) {
+  //   isNext.value = false;
+  // } else {
+  //   isNext.value = true;
+  // }
 }
 
 function prev() {
