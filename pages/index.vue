@@ -26,7 +26,7 @@
         </svg>
         
         <a
-          href="https://twitter.com/nibing1029820"
+          href="https://forms.gle/QztDnd9b7ZTgP3pa7"
           target="_blank"
           rel="noreferrer"
           class="cursor-pointer pl-6"
