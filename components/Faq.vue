@@ -17,9 +17,9 @@
               <DisclosureButton
                 class="flex w-full items-start justify-between text-left text-gray-900"
               >
-                <h3 class="text-2xl font-semibold leading-7">{{
-                  faq.question
-                }}</h3>
+                <h3 class="text-2xl font-semibold leading-7">
+                  {{ faq.question }}
+                </h3>
                 <span class="ml-6 flex h-7 items-center">
                   <PlusSmallIcon
                     v-if="!open"
@@ -31,7 +31,9 @@
               </DisclosureButton>
             </dt>
             <DisclosurePanel as="dd" class="mt-2 pr-12">
-              <pre class="text-base leading-7 text-gray-600">{{ faq.answer }}</pre>
+              <pre class="text-base leading-7 text-gray-600">{{
+                faq.answer
+              }}</pre>
             </DisclosurePanel>
           </Disclosure>
         </dl>
@@ -47,8 +49,7 @@ import { MinusSmallIcon, PlusSmallIcon } from "@heroicons/vue/24/outline";
 const faqs = [
   {
     question: "How to play?",
-    answer:
-      `It's a puzzle game that talks to AI large language models:
+    answer: `It's a puzzle game that talks to AI large language models:
 
 1. First, read the questions carefully and understand the requirements
 (sometimes it's the questions you don't understand that keep you from
@@ -73,12 +74,19 @@ the question.`,
   },
   {
     question: "How to contact me?",
-    answer: "If you have any ideas or suggestions for this game, please \nfeel free to contact me! tommy.ni1997@gmail.com "
+    answer:
+      "If you have any ideas or suggestions for this game, please \nfeel free to contact me! tommy.ni1997@gmail.com ",
   },
   {
     question: "Source of inspiration",
-    answer: "This game is inspired by the Chinese phrase 'Oops! I'm surrounded \nby large language models' by Haoqiang Fan."
-  }
+    answer:
+      "This game is inspired by the Chinese phrase 'Oops! I'm surrounded \nby large language models' by Haoqiang Fan.",
+  },
+  {
+    question: "Supported Languages",
+    answer:
+      "Currently it mainly supports English, other languages are still \nunder development. If you use Chinese or other language input, for \nsome need to count the number of words input and output problems, it \nwill cause inaccuracies, resulting in failure to pass the question.",
+  },
   // More questions...
 ];
 </script>
