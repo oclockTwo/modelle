@@ -15,14 +15,14 @@
           can be completed. If it takes too long to finish, you can re-post it.
         </p>
       </div>
-      <div class="text-center">
-        <div v-if="isCorrect === 1">
+      <div class="text-center ">
+        <div v-if="isCorrect === 1" class="h-[200px] overflow-auto">
           <p class="font-bold text-lg mb-6">Congratulations! You're amazing</p>
           <p class="text-6xl">🥳</p>
           <p class="text-center">You can go to the next question.</p>
           <p class="font-bold mt-6">Output: {{ output }}</p>
         </div>
-        <div v-if="isCorrect === 2">
+        <div v-if="isCorrect === 2" class="h-[200px] overflow-auto">
           <p class="font-bold text-lg mb-6">Oh no! Just a little bit</p>
           <p class="text-6xl">🥺</p>
           <p class="text-center">

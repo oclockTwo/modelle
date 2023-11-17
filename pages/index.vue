@@ -78,7 +78,6 @@
               src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png"
               alt="Buy Me A Coffee"
               class="sm:w-[217px] sm:h-[50px] w-[150px] h-[35px]"
-              
           /></a>
           <div v-if="!isNext">
             <div class="tooltip" data-tip="Please complete this question first">
