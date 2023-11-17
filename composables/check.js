@@ -1,3 +1,23 @@
+function detectLanguage(str) {
+  const chineseRegex = /[\u3400-\u9FBF]/;
+
+  if (chineseRegex.test(str)) {
+    return 'zh';
+  } else {
+    return 'en';
+  }
+}
+
+function countChineseAndEnglish(str) {
+  const chineseRegex = /[\u3400-\u9FBF]/g;
+  const englishRegex = /\b[A-Za-z]+\b/g;
+
+  const chineseCount = (str.match(chineseRegex) || []).length;
+  const englishCount = (str.match(englishRegex) || []).length;
+
+  return chineseCount + englishCount;
+}
+
 function check11(input, output) {
   if (output === "1+1=3") {
     return [true, ""];
@@ -6,13 +26,9 @@ function check11(input, output) {
 }
 
 function check12(input, output) {
-  const pattern = /\b\w+\b/g;
-
-  const matchesInput = input.match(pattern);
-  const matchesOutput = output.match(pattern);
-
-  const inputSize = matchesInput ? matchesInput.length : 0;
-  const outputSize = matchesOutput ? matchesOutput.length : 0;
+  const inputSize = countChineseAndEnglish(input);
+  const outputSize = countChineseAndEnglish(output);
+  console.log("inputSize:", inputSize, "outputSize:", outputSize);
 
   if (inputSize > 3 || outputSize <= 30) {
     return [false, ""];
@@ -21,13 +37,9 @@ function check12(input, output) {
 }
 
 function check13(input, output) {
-  const pattern = /\b\w+\b/g;
-
-  const matchesInput = input.match(pattern);
-  const matchesOutput = output.match(pattern);
-
-  const inputSize = matchesInput ? matchesInput.length : 0;
-  const outputSize = matchesOutput ? matchesOutput.length : 0;
+  const inputSize = countChineseAndEnglish(input);
+  const outputSize = countChineseAndEnglish(output);
+  console.log("inputSize:", inputSize, "outputSize:", outputSize);
 
   if (inputSize > 1 || outputSize <= 100) {
     return [false, ""];
@@ -36,13 +48,8 @@ function check13(input, output) {
 }
 
 function check14(input, output) {
-  const pattern = /\b\w+\b/g;
-
-  const matchesInput = input.match(pattern);
-  const matchesOutput = output.match(pattern);
-
-  const inputSize = matchesInput ? matchesInput.length : 0;
-  const outputSize = matchesOutput ? matchesOutput.length : 0;
+  const inputSize = countChineseAndEnglish(input);
+  const outputSize = countChineseAndEnglish(output);
 
   if (inputSize > 1 || outputSize >= 20) {
     return [false, ""];
@@ -78,7 +85,8 @@ function countWords1(text) {
 }
 
 function check21(input, output) {
-  const qsLength = countWords1(input.trim());
+  // const qsLength = countWords1(input.trim());
+  const qsLength = countChineseAndEnglish(input.trim());
   if (!isPrime(qsLength)) {
     return [
       false,
@@ -86,7 +94,8 @@ function check21(input, output) {
     ];
   }
 
-  const answerValue = countWords1(output);
+  // const answerValue = countWords1(output);
+  const answerValue = countChineseAndEnglish(output);
   const nextPrimeNum = nextPrime(qsLength);
   if (answerValue !== nextPrimeNum) {
     return [
@@ -211,13 +220,24 @@ function check25(input, output) {
   }
 }
 
+// function countWords2(text, wordsSet) {
+//   const words = text.toLowerCase().match(/\w+/g) || [];
+//   return words.reduce((count, word) => count + (wordsSet.has(word) ? 1 : 0), 0);
+// }
+
 function countWords2(text, wordsSet) {
-  const words = text.toLowerCase().match(/\w+/g) || [];
-  return words.reduce((count, word) => count + (wordsSet.has(word) ? 1 : 0), 0);
+  // 匹配中文字符和英文单词
+  const words = text.match(/[\u3400-\u9FBF]+|[A-Za-z]+/g) || [];
+  return words.reduce((count, word) => {
+    // 对于英文单词，转换为小写进行匹配
+    word = /[A-Za-z]/.test(word) ? word.toLowerCase() : word;
+    return count + (wordsSet.has(word) ? 1 : 0);
+  }, 0);
 }
 
 function check26(input, output) {
-  const qWords = input.toLowerCase().match(/\w+/g) || [];
+  // const qWords = input.toLowerCase().match(/\w+/g) || [];
+  const qWords = input.match(/[\u3400-\u9FBF]+|[A-Za-z]+/g) || [];
   if (qWords.length > 10) {
     return [false, "The question must not exceed 10 words"];
   }
@@ -243,7 +263,7 @@ function check31(input, output) {
   output = output.trim();
   input = input.trim();
 
-  if (countWords1(input) < 10) {
+  if (countChineseAndEnglish(input) < 10) {
     return [false, "Question should be no less than 10 words."];
   }
 
@@ -258,15 +278,26 @@ function wordReverseText(text) {
   return text.split(/\s+/).reverse().join(" ");
 }
 
+function reverseWords(str) {
+  // 英文单词的反转
+  if (/^[A-Za-z\s]+$/.test(str)) {
+    return str.split(' ').reverse().join(' ');
+  }
+  // 中文字符的反转
+  else {
+    return str.split('').reverse().join('');
+  }
+}
+
 function check32(input, output) {
   output = output.trim();
   input = input.trim();
 
-  if (countWords1(input) < 10) {
+  if (countChineseAndEnglish(input) < 10) {
     return [false, "Question should be no less than 10 words."];
   }
 
-  const reversedUserText = wordReverseText(input);
+  const reversedUserText = reverseWords(input);
 
   if (reversedUserText === output) {
     return [true, ""];
@@ -327,7 +358,7 @@ function check51(input, output) {
   output = output.trim();
   input = input.trim();
 
-  if (countWords1(input) < 10) {
+  if (countChineseAndEnglish(input) < 10) {
     return [false, "Question should be no less than 10 words."];
   }
 
