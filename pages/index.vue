@@ -106,6 +106,7 @@
         </div>
       </div>
     </div>
+    
   </main>
   <Footer />
   <Faq />

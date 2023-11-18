@@ -18,7 +18,9 @@
           "
           class="block my-0 mx-px w-4 max-w-full h-4"
       /></span>
-      <span class="font-bold text-lg">Model<span class="text-green-600">LE</span> AI</span>
+      <span class="font-bold text-lg"
+        >Model<span class="text-green-600">LE</span> AI</span
+      >
     </div>
     <div class="flex gap-5 justify-center items-center mt-2 text-black">
       <a
@@ -39,6 +41,16 @@
           src="/images/icons/twitter.png"
           alt="twitter"
           class="block w-10 max-w-full h-10 align-middle"
+      /></a>
+      <a
+        href="https://www.producthunt.com/posts/modelle-ai-game?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-modelle&#0045;ai&#0045;game"
+        target="_blank"
+        ><img
+          src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=425628&theme=light"
+          alt="ModelLe&#0032;AI&#0032;Game - &#0032;ChatGPT&#0032;Dialog&#0032;Puzzle&#0032;Game | Product Hunt"
+          style="width: 250px; height: 54px"
+          width="250"
+          height="54"
       /></a>
     </div>
   </footer>
