@@ -110,7 +110,6 @@
   </main>
   <Footer />
   <Faq />
-  <iframe src="https://huggingface.co/spaces/multimodalart/stable-video-diffusion" width="1000" height="800"></iframe>
 </template>
 
 <script setup>
