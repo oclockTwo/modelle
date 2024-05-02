@@ -2,10 +2,15 @@
 export default {
   content: [],
   theme: {
-    extend: {},
+    extend: {
+      colors: {
+        "main": "#fffaf4",
+        "main-dark": "#2B2B2B",
+      },
+    },
   },
   plugins: [require("daisyui"), require("@tailwindcss/forms")],
   daisyui: {
-    themes: ["light", "dark", "cupcake", "synthwave"],
-   },
+    // themes: ["light", "dark", "cupcake", "synthwave"],
+  },
 };

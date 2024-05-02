@@ -52,6 +52,27 @@
           width="250"
           height="54"
       /></a>
+      <a href="https://magnificai.co" alt="Magnific AI">
+        <img
+          src="/images/icons/magnificai.png"
+          alt="Magnifci AI"
+          class="block w-10 max-w-full h-10 align-middle"
+        />
+      </a>
+      <a href="https://gigapixelai.com" alt="Gigapixel AI">
+        <img
+          src="/images/icons/gigapixelai.png"
+          alt="Gigapixel AI"
+          class="block w-10 max-w-full h-10 align-middle"
+        />
+      </a>
+      <a href="https://facetomany.com" alt="face to many">
+        <img
+          src="/images/icons/facetomany.png"
+          alt="face to many"
+          class="block w-10 max-w-full h-10 align-middle"
+        />
+      </a>
     </div>
   </footer>
 </template>

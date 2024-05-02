@@ -8,6 +8,7 @@ export default defineNuxtConfig({
     "nuxt-headlessui",
     "@nuxtjs/robots",
     "nuxt-simple-sitemap",
+    '@pinia/nuxt',
   ],
 
   googleFonts: {
